@@ -1,16 +1,11 @@
-html { /* body won't work ¯\_(ツ)_/¯ */
-    scroll-snap-type: y mandatory;
-    scroll-padding: 8vh;
-    overflow-y: scroll hidden;
-  
+body {
     height: 100vh;
     width: 100vw;
-}
-
-body {
     display: flex;
     flex-flow: column;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
+    
+   
 }
 
 /*--------HEADER--------*/
@@ -41,22 +36,23 @@ header {
 }
 /*  hover  */
 .nav_links li a:hover {
-    color: #0088a9;
+    color:  #40277b;
 }
 
 /*  bouton contact  */
 button{
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: #40277b;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     font-weight: bold;
+    color: #fff;
 }
 
 button:hover{
-    background-color: rgba(0,136,169,0.8);
+    background-color: rgb(64, 39, 123,0.8);
 }
 
 /*-----------------------------*/
@@ -69,26 +65,153 @@ section {
     scroll-snap-align: start;
 }
 
-.sectionOne {
-    background-color: #24252A;  
-    padding-top: 8vh;
-}
-
-.sectionTwo {
-    background-color:palevioletred;
-}
-
-.sectionThree {
-    background-color:cadetblue;
-}
-
-.sectionFour {
-    background-color:rgb(52, 175, 124);
-}
-
 h1 {
     color: white;
 }
+
+
+.sectionOne {
+    /* background-color: #24252A;   */
+    /*BACKGROUND IMAGE SANS DEFORMATION*/
+    background-position: center;
+    background-size: cover;
+    background-image: url(../image/background.jpg);
+
+}
+
+.sectionTwo {
+    /* background-color:palevioletred; */
+}
+
+.sectionThree {
+   /*  background-color:cadetblue; */
+}
+/*----------CONTACT----------*/
+.sectionFour {
+    background-color: #24252A; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%; 
+}
+
+/*------- FORM ---------*/
+.form_container {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid  #fff; ;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/*pbl pour  champs email*/
+/*BARRE DE SAISI: quand barre dans le champs de saisi label -> le texte monte (animation)*/
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    /* outline = he orange or blue border (outline) around text/input boxes? input:active */
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px ;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget label input{
+    margin-right: 3px;  
+}
+
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover{
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.register {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
+
+
 
 
 
